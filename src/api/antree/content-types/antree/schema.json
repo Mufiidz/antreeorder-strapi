@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "antrees",
+  "info": {
+    "singularName": "antree",
+    "pluralName": "antrees",
+    "displayName": "Antree",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "merchantId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::merchant.merchant",
+      "inversedBy": "antrees"
+    },
+    "customerId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::customer.customer",
+      "inversedBy": "antrees"
+    },
+    "totalPrice": {
+      "type": "biginteger",
+      "min": "0"
+    },
+    "remaining": {
+      "type": "integer"
+    },
+    "nomorAntree": {
+      "type": "integer",
+      "min": 1
+    },
+    "isVerify": {
+      "type": "boolean",
+      "default": false
+    },
+    "status": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::status.status"
+    },
+    "seats": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::seat.seat"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order.order"
+    }
+  }
+}

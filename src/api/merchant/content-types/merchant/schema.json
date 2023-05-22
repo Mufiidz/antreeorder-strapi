@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "merchants",
+  "info": {
+    "singularName": "merchant",
+    "pluralName": "merchants",
+    "displayName": "Merchant",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "isOpen": {
+      "type": "boolean",
+      "default": false
+    },
+    "antrees": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::antree.antree",
+      "mappedBy": "merchantId"
+    },
+    "seats": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::seat.seat",
+      "mappedBy": "merchant"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "merchant"
+    }
+  }
+}

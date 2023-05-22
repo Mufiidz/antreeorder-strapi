@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "seats",
+  "info": {
+    "singularName": "seat",
+    "pluralName": "seats",
+    "displayName": "Seat",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "quantity": {
+      "type": "integer",
+      "default": 1,
+      "min": 1
+    },
+    "capacity": {
+      "type": "integer",
+      "default": 1,
+      "min": 1,
+      "required": true
+    },
+    "merchant": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::merchant.merchant",
+      "inversedBy": "seats"
+    }
+  }
+}

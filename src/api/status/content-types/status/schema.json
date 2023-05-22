@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "statuses",
+  "info": {
+    "singularName": "status",
+    "pluralName": "statuses",
+    "displayName": "Status",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "message": {
+      "type": "string"
+    },
+    "statusCode": {
+      "type": "integer",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
