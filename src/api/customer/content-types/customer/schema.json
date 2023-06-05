@@ -21,7 +21,7 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::antree.antree",
-      "mappedBy": "customerId"
+      "mappedBy": "customer"
     }
   }
 }

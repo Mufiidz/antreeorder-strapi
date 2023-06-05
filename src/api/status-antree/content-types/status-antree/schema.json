@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "status_antrees",
+  "info": {
+    "singularName": "status-antree",
+    "pluralName": "status-antrees",
+    "displayName": "StatusAntree",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "message": {
+      "type": "string"
+    },
+    "statusCode": {
+      "type": "integer"
+    },
+    "description": {
+      "type": "string"
+    },
+    "altMessage": {
+      "type": "string"
+    }
+  }
+}

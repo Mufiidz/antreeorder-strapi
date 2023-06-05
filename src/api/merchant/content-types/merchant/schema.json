@@ -16,12 +16,6 @@
       "type": "boolean",
       "default": false
     },
-    "antrees": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::antree.antree",
-      "mappedBy": "merchantId"
-    },
     "seats": {
       "type": "relation",
       "relation": "oneToMany",
@@ -37,6 +31,12 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::product.product",
+      "mappedBy": "merchant"
+    },
+    "antrees": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::antree.antree",
       "mappedBy": "merchant"
     }
   }

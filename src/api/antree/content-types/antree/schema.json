@@ -12,21 +12,21 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "merchantId": {
+    "merchant": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::merchant.merchant",
       "inversedBy": "antrees"
     },
-    "customerId": {
+    "customer": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::customer.customer",
       "inversedBy": "antrees"
     },
     "totalPrice": {
-      "type": "biginteger",
-      "min": "0"
+      "type": "integer",
+      "required": true
     },
     "remaining": {
       "type": "integer"
@@ -39,12 +39,7 @@
       "type": "boolean",
       "default": false
     },
-    "status": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::status.status"
-    },
-    "seats": {
+    "seat": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::seat.seat"
@@ -53,6 +48,14 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::order.order"
+    },
+    "status": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::status-antree.status-antree"
+    },
+    "takenAt": {
+      "type": "datetime"
     }
   }
 }

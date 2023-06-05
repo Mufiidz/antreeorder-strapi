@@ -8,7 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -18,21 +18,21 @@
     },
     "price": {
       "type": "integer",
-      "required": true,
-      "min": 0,
-      "max": 1000000000
+      "required": true
     },
     "description": {
       "type": "text"
     },
     "category": {
-      "type": "string"
+      "type": "string",
+      "default": "No Category"
     },
     "quantity": {
       "type": "integer",
-      "min": 0
+      "min": 1,
+      "default": 1
     },
-    "imageUrl": {
+    "imageUrls": {
       "type": "media",
       "multiple": true,
       "required": false,
@@ -45,6 +45,10 @@
       "relation": "manyToOne",
       "target": "api::merchant.merchant",
       "inversedBy": "products"
+    },
+    "isAvailable": {
+      "type": "boolean",
+      "default": true
     }
   }
 }
